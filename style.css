@@ -1,0 +1,91 @@
+body {
+  background: rgb(9, 0, 128) !important;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  font-family: Arial, sans-serif;
+}
+
+.card {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 350px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.card h1 {
+  color: #ff4d6d;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #444;
+  font-size: 16px;
+}
+
+.firma {
+  margin-top: 20px;
+  font-style: italic;
+  color: #777;
+}
+
+/* Corazón */
+.heart {
+  width: 50px;
+  height: 50px;
+  background: #ff4d6d;
+  margin: 20px auto;
+  position: relative;
+  transform: rotate(45deg);
+  animation: latido 1s infinite;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  background: #ff4d6d;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.heart::before {
+  top: -30px;
+  left: 0;
+}
+
+.heart::after {
+  left: -30px;
+  top: 0;
+}
+
+/* Animación de latido */
+@keyframes latido {
+  0% {
+    transform: rotate(45deg) scale(1);
+  }
+  50% {
+    transform: rotate(45deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(45deg) scale(1);
+  }
+}
+
+.foto {
+  width: 120px;        /* Tamaño de la imagen */
+  height: 120px;
+  border: 5px solid red;
+  object-fit: cover;   /* Para que no se deforme */
+  border-radius: 50%;  /* La hace redondita */
+  display: block;
+  margin: 0 auto 15px auto; /* Centrada */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
